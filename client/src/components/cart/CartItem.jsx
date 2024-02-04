@@ -48,6 +48,11 @@ const CartItem = ({item}) => {
     const  removeItemFromCart =(id) =>{
         dispatch(removeFromCart(id))
     }
+/*     const updateQuantity = (newQuantity) => {
+        // You can dispatch an action to update the quantity in the Redux store if needed.
+        // For simplicity, I'm just updating the quantity property directly.
+        item.quantity = newQuantity;
+    }; */
 
     return(
         <Component>
@@ -57,17 +62,18 @@ const CartItem = ({item}) => {
             </LeftComponent>
             <Box style={{margin:'20px'}}>
                 
-                    <Typography >{addEllipsis( item.title.longTitle)}
+                    {/* <Typography >{addEllipsis( item.title.longTitle)} */}
+                    <Typography>{addEllipsis(item.title && item.title.longTitle)}
                     <DeliveryDate component='span' >Delivery by {date.toDateString()} | ₹40</DeliveryDate>
                     </Typography>
                 
-                <SellerText style={{display:'flex'}} >Seller: Retailet
+                <SellerText style={{display:'flex'}} >Seller: RetailNet
                 <Box component='span' > <img src={fassured} alt="logo" style={{ width: '70px', marginLeft: '10px'}} /> </Box>
                 </SellerText>
                 <Typography style={{ margin: '8px 0px' }}>
-                <Box component='span' style={{ fontSize: '20px', fontWeight: '600' }}>&#8377;{item.price.cost}&#160;</Box>
-                <Box component='span' style={{fontSize: '14px', color: '#878787', fontWeight: '550' }}><strike>&#8377;{item.price.mrp} </strike> &#160;</Box>
-                <Box component='span' style={{fontSize: '14px', color: '#388e3c', fontWeight: '550' }}>{item.price.discount}&#160;Off 1 coupon and 1 offer applied</Box>
+                <Box component='span' style={{ fontSize: '20px', fontWeight: '600' }}>&#8377;{item.price.cost }&#160;</Box>
+                <Box component='span' style={{fontSize: '14px', color: '#878787', fontWeight: '550' }}><strike>&#8377;{ item.price.mrp } </strike> &#160;</Box>
+                <Box component='span' style={{fontSize: '14px', color: '#388e3c', fontWeight: '550' }}>{item.price.discount }&#160;Off 1 coupon and 1 offer applied</Box>
             </Typography>
             <RemoveBtn onClick={()=> removeItemFromCart(item.id)}> remove </RemoveBtn>
             <RemoveBtn> save for later </RemoveBtn>

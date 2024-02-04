@@ -17,12 +17,15 @@ const Component = styled(Box)({
 })
 
 export default function Home() {
-  const {products}=  useSelector(state => state.getProducts)// this getProduct is  state seen in redud devtools from getProductReducer
+  const {products}=  useSelector(state => state.getProducts)// this getProduct is  state seen in redud devtools from getProductReducer  45.00
   console.log(products)
+
   const dispatch = useDispatch()
+
   useEffect(()=>{
       dispatch(getProducts()) // this getProduct is function from productAction
   },[dispatch]) //empty array is for componentDidMount
+  
   return (
     <>
         <Navbar/>

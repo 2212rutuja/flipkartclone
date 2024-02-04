@@ -14,13 +14,15 @@ import { imageURL } from "../../constants/data.js"
 
 const Wrapper  = styled(Grid)({
     marginTop:'10px',
-    justifyContent:'space-between'
+    justifyContent:'space-between',
+    
 })
 
 const MidBanImg = styled('img')(({ theme }) => ({
     width: '100%',
-    height: '250px',
+    height: '350px',
     marginTop: '10px',
+    justifyContent:'space-between',
     [theme.breakpoints.down('md')]:{ //applies to screen below medium size
         objectFit :'cover',
         heigh:'150px'
@@ -29,21 +31,21 @@ const MidBanImg = styled('img')(({ theme }) => ({
   }));
 
 const MidSection = ()=>{
-    const midbannerUrl = 'https://flashsaletricks.com/wp-content/uploads/2016/07/cab8463b683d93c0111bf43f234f6b6a2474810436442088768.jpg'
+    const midbannerUrl = 'https://i.ytimg.com/vi/P25zYhlrpLc/maxresdefault.jpg'
 
     return(
         <>
         <Wrapper lg={12} sm={12} md={12} xs={12} container>
             {
                 imageURL.map((image) =>(
-                    <Grid item lg={4} md={4} sm={12} xs={12}>
+                    <Grid item lg={4} md={4} sm={12} xs={12} >
                     <img src={image} alt="banner"  style={{width:'100%'}} />
                     </Grid>
                 ))
             }
 
         </Wrapper>
-        <MidBanImg src={midbannerUrl} alt="midbanner" />
+        <MidBanImg src={midbannerUrl} />
         </>
     )
 }

@@ -94,7 +94,7 @@ const accountInitialValues = {
   signup:{
     view:'signup',
     heading:"Looks like you're new here!",
-    subheading:"Sign up with your mobile number to get started"
+    subheading:"Sign up with your details to get started"
   }
 }
 
@@ -178,7 +178,7 @@ export default function LoginDailouge({ open, setOpen }) {
             account.view === 'login' ?
               <RightWrapper>
                 <TextField variant="standard" onChange={(e)=>onValueChange(e)} name="username" label="Enter Email/ Username" />
-                <TextField variant="standard" onChange={(e)=>onValueChange(e)} name="password" label="Enter Password" />
+                <TextField variant="standard" onChange={(e)=>onValueChange(e)} name="password" type="password" label="Enter Password" />
                 {error && <Error Error>Please enter valid Username or password </Error>}
                 <FontStyle>By continuing, you agree to Flipkart's
                   <Box component="span" style={{ color: '#2874f0', cursor: 'pointer' }}> Terms of Use</Box> and

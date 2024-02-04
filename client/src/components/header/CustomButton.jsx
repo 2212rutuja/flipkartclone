@@ -15,10 +15,12 @@ const Wrapper = styled(Box)(({theme})=>({
     margin: '0% 3% 0% auto',
     '& > button, & > p, & > div':{
         marginRight:'40px',
-        fontSize:'16px'
+        fontSize:'16px',
+       
 
     },
-    alignItems:'center',
+    alignItems: 'center',
+   
     [theme.breakpoints.down('md')]:{
         display:'block'
     }
@@ -50,6 +52,22 @@ const LognBtn = styled(Button)({
     
 })
 
+const ShoppingIcon = styled(ShoppingCartIcon)(({theme})=>({
+    [theme.breakpoints.down('md')]:{
+            color:'black',
+            display:'flex',
+            flexDirection:'row'
+    }
+
+}))
+
+ const CartTypography = styled(Typography)(({theme})=>({
+    [theme.breakpoints.down('md')]:{
+        color:'black',
+        
+    }
+})) 
+
 export default function CustomButton() {
     const [open, setOpen] = useState(false);
     const {account,setAccount} = useContext(DataContext);
@@ -71,9 +89,9 @@ export default function CustomButton() {
         <Typography style={{marginTop:3}}> More </Typography>
         <Container to='/cart'>
             <Badge badgeContent = {cartItems?.length} color="error">
-            <ShoppingCartIcon />
+            <ShoppingIcon />
             </Badge>
-            <Typography style={{marginLeft:'10px'}}>Cart</Typography>
+            <CartTypography style={{marginLeft:'10px'}}>Cart</CartTypography>
         </Container>
         <LoginDailouge open={open} setOpen={setOpen}/>
            

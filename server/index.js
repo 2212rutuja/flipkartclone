@@ -37,7 +37,7 @@ app.listen(PORT,()=>console.log(`Server running on ${PORT}`))
 
 DefaultData();
 
-export let paytmMerchantKey = process.env.PAYTM_MERCHANT_KEY
+ export let paytmMerchantKey = process.env.PAYTM_MERCHANT_KEY
 export let paytmParams = {};
 paytmParams['MID'] = process.env.PAYTM_MID,
 paytmParams['WEBSITE'] = process.env.PAYTM_WEBSITE,
@@ -49,7 +49,7 @@ paytmParams['TXN_AMOUNT'] = '100',
 paytmParams['CALLBACK_URL'] = 'http://localhost:8000/callback',
 //paytmParams['CALLBACK_URL'] = 'callback',
 paytmParams['EMAIL'] = 'personaluse2212@gmail.com',
-paytmParams['MOBILE_NO'] = '1212121212'
+paytmParams['MOBILE_NO'] = '1212121212' 
 
 
 

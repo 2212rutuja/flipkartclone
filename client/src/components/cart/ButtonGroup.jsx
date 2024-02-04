@@ -34,7 +34,7 @@ const ButtonStyle = styled(Button)({
 })
 
 const BtnGroup = () =>{
-    const [count, setCount] = useState(1);
+     const [count, setCount] = useState(1);
 
     const handleIncrease = () => {
         setCount(count + 1);
@@ -44,12 +44,15 @@ const BtnGroup = () =>{
         if (count > 1) {
             setCount(count - 1);
         }
-    }
+    } 
+
+    
 
     return(
         <Component>
             <ButtonStyle onClick={handleDecrease}>-</ButtonStyle>
-            <Button>{count}</Button>
+             <Button>{count}</Button> 
+            {/* <Button>{quantity}</Button> */}
             <ButtonStyle onClick={handleIncrease}>+</ButtonStyle>
         </Component>
     )

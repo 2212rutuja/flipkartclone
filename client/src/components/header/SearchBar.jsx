@@ -20,7 +20,7 @@ const Searchbox = styled(Box)({
     
 })
 
-const InputSearchBase = styled(InputBase)({
+const InputSearchBase = styled(InputBase)({  /* Inputbase is for textfield */
     padding:'5px 16px',
     width:'100%',
     fontSize:'14px'
