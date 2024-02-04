@@ -62,7 +62,7 @@ Make sure you have the following software/tools installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/[Your GitHub Username]/flipkartclone.git
+   git clone https://github.com/2212rutuja/flipkartclone.git
 
 2. Navigate to the project directory:
    cd flipkartclone
